@@ -4,6 +4,7 @@ const parkingForm = document.querySelector("#container");
 
 parkingForm.addEventListener("submit", function (event) {
   event.preventDefault();
+  // let newElement = document.createElement("#total");
 
   let days = document.querySelector("#days").value;
   let startDay = document.querySelector("#start-date").value;
@@ -13,10 +14,10 @@ parkingForm.addEventListener("submit", function (event) {
   if (validateCardNumber(cardNumber) == false) {
     document.querySelector("#credit-card").classList.remove("valid");
     document.querySelector("#credit-card").classList.add("invalid");
-    document
-      .querySelector("#credit-card")
-      .setCustomValidity("Please enter valid credit card number");
-    document.querySelector("#credit-card").reportValidity();
+    // document
+    //   .querySelector("#credit-card")
+    //   .setCustomValidity("Please enter valid credit card number");
+    // document.querySelector("#credit-card").reportValidity();
     return;
 
     // this is where cycle should continue with empty container
@@ -43,6 +44,9 @@ parkingForm.addEventListener("submit", function (event) {
       approve();
     }
   }
+  // if (yearMonth > newExp) {
+
+  // }
 });
 
 //  Number of days function
@@ -107,5 +111,3 @@ function approve() {
   console.log(shortYear);
   let yearMonth = "shortYear" + "month";
 }
-
-// if (yearMonth > newExp)
