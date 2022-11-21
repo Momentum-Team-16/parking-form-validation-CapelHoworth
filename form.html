@@ -4,10 +4,6 @@
     <meta charset="utf-8" />
     <title>Form Validation</title>
     <link rel="stylesheet" href="style.css" />
-    <script
-      rel="moment"
-      href="https://momentjs.com/downloads/moment.js"
-    ></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -42,7 +38,7 @@
         </div>
         <div class="input-field" id="credit-card-field">
           <label for="credit-card">Credit Card</label>
-          <input id="credit-card" type="text" />
+          <input id="credit-card" type="number" />
         </div>
         <div class="row">
           <div class="col">
@@ -54,7 +50,12 @@
           <div class="col">
             <div class="input-field" id="expiration-field">
               <label for="expiration">Expiration</label>
-              <input id="expiration" type="text" placeholder="MM/YY" />
+              <input
+                id="expiration"
+                type="text"
+                pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$"
+                placeholder="MM/YY"
+              />
             </div>
           </div>
         </div>
